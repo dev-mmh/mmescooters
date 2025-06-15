@@ -13,28 +13,28 @@ import ThreeWheelSection from "../components/Three_wheel_section.js";
 import { Box, Button, Dialog, DialogContent, DialogTitle, Grid2 } from "@mui/material";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
+const viberNumber = "+959442274599";
+
 const ProductDetail = () => {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
-  const [selectedImage, setSelectedImage] = useState(product?.imageUrl);
+  const [selectedImage, setSelectedImage] = useState(undefined);
 
   const [openDialog, setOpenDialog] = useState(false);
   const imageRef = useRef(null);
 
-  const [product1, setProduct1] = useState(product);
-  const [product2, setProduct2] = useState(product);
+  const [product1, setProduct1] = useState(undefined);
+  const [product2, setProduct2] = useState(undefined);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
+
   useEffect(() => {
     if (product) {
-      setSelectedImage(product.imageUrl);
+      setSelectedImage(product?.imageUrl);
     }
   }, [product]);
-  if (!product) {
-    return <h2>Product Not Found</h2>;
-  }
 
   const handleThumbnailClick = (e, img) => {
     e.preventDefault();
@@ -52,8 +52,39 @@ const ProductDetail = () => {
 
   const onCloseDialog = () => {
     setOpenDialog(false);
-    setProduct1(product);
+    setProduct1(undefined);
     setProduct2(undefined);
+  }
+
+  const smartViberRedirect = () => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const cleanNumber = viberNumber.replace(/[^\d+]/g, ''); // Clean the number
+
+    if (isMobile) {
+      // Try to open Viber app first
+      const viberAppUrl = `viber://chat?number=${cleanNumber}`;
+      window.location.href = viberAppUrl;
+
+      // Fallback: Try alternative formats if first doesn't work
+      setTimeout(() => {
+        // Try Viber's deep link format
+        const alternativeUrl = `viber://contact?number=${cleanNumber}`;
+        window.location.href = alternativeUrl;
+      }, 500);
+
+      // Final fallback: redirect to Viber download page
+      setTimeout(() => {
+        console.log("Redirecting to Viber download page...");
+        window.open('https://www.viber.com/download/', '_blank');
+      }, 2000);
+    } else {
+      // Desktop - redirect to Viber download page since web chat is limited
+      window.open('https://www.viber.com/download/', '_blank');
+    }
+  };
+
+  if (!product) {
+    return <h2>Product Not Found</h2>;
   }
 
   return (
@@ -112,14 +143,18 @@ const ProductDetail = () => {
                         onSelect={setProduct1}
                         exclueIds={[product2?.id]}
                       />
-                      <motion.img
-                        ref={imageRef}
-                        src={product1.imageUrl}
-                        alt={product1.name}
-                        className="main-image"
-                        style={{ height: "200px", objectFit: "contain" }}
-                      />
-                      <ProductInfo product={product1} />
+                      {
+                        product1 && <>
+                          <motion.img
+                            ref={imageRef}
+                            src={product1.imageUrl}
+                            alt={product1.name}
+                            className="main-image"
+                            style={{ height: "200px", objectFit: "contain" }}
+                          />
+                          <ProductInfo product={product1} />
+                        </>
+                      }
                     </Grid2>
 
                     <Grid2 size={{ xs: 12, md: 6 }} sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
@@ -150,9 +185,10 @@ const ProductDetail = () => {
           <Box>
             <ProductInfo product={product} />
             <div className="add-to-cart">
-              <button className="cart-btn"><a href="viber://chat?number=+959796265591" className="cart-btn">
-                Click here to Order Product
-              </a>
+              <button className="cart-btn" onClick={smartViberRedirect}>
+                <span className="cart-btn">
+                  Click here to Order Product
+                </span>
               </button>
             </div>
           </Box>

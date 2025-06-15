@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import {
   AppBar, Toolbar, Typography, Button, IconButton, Drawer,
   List, ListItem, ListItemText, MenuItem, Select, Box
@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom"; // Import useLocation
 import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Logo from "../assets/images/logo_png.png";
+import Logo from "../assets/images/logo.jpeg";
 import "../styles/header.css"; // Import separate CSS
 import HeaderMenu from "./HeaderMenu";
 import { useTranslation } from 'react-i18next';
-  
+
 // Import flag images
 import USFlag from "../assets/images/myanmar.png";
 import MMFlag from "../assets/images/us.png";
@@ -19,21 +19,24 @@ import CNFlag from "../assets/images/chinese.png";
 import i18next from "i18next";
 
 const Header = () => {
-  const localLanguage = localStorage.getItem("language");  
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [language, setLanguage] = useState(localLanguage);
+  const [language, setLanguage] = useState(null);
   const isMobile = useMediaQuery("(max-width: 900px)");
   const location = useLocation(); // Get the current route
   const [isShowProductMenu, setIsShowMenu] = useState(false);
   const { t } = useTranslation();
-  
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  useEffect(() => {
+    setLanguage(localStorage.getItem("language") || "en");
+  }, [])
+
   const handleLanguageChange = (event) => {
     const language = event.target.value;
-    
+
     setLanguage(language);
     i18next.changeLanguage(language);
     localStorage.setItem("language", language);
@@ -68,7 +71,7 @@ const Header = () => {
     { code: "cn", label: t("header_language_cn"), flag: CNFlag },
   ];
 
-  const _onClickMenu = (e, text) =>{
+  const _onClickMenu = (e, text) => {
     e.preventDefault();
     text === t("header_products") && setIsShowMenu(!isShowProductMenu)
   }
@@ -99,17 +102,13 @@ const Header = () => {
               ))}
 
               {/* Language Selector */}
-              <Select value={language} onChange={handleLanguageChange} className="header-language-selector" sx={{color: '#FFFFFF', backgroundColor: '#00AC36', borderRadius: '4px',borderColor: '#FFFFFF'}}>
+              <Select value={language} onChange={handleLanguageChange} className="header-language-selector">
                 {languages.map((lang) => (
                   <MenuItem key={lang.code} value={lang.code} className="header-language-option">
                     <img src={lang.flag} alt={lang.label} className="header-language-flag" />
-                    {lang.label}
                   </MenuItem>
                 ))}
               </Select>
-
-                            <Typography sx={{ fontSize:'12px' }}>+959 796265591</Typography>
-
             </>
           )}
 
@@ -151,8 +150,7 @@ const Header = () => {
           </Box>
         </Drawer>
       </AppBar >
-      {isShowProductMenu && <HeaderMenu onClose={()=>setIsShowMenu(false)} />
-      }    </>
+      {isShowProductMenu && <HeaderMenu onClose={() => setIsShowMenu(false)} />}</>
 
   );
 };

@@ -16,9 +16,9 @@ import HomeLayoutEnding from '../components/Home_Layout_Ending';
 const Home = () => {
   return (
     <div>
-      <Header />   
-            <AnimatedHeader />
-            
+      <Header />
+      <AnimatedHeader />
+
 
       <HeroText />
 
@@ -26,15 +26,15 @@ const Home = () => {
 
 
 
-                        <HomeStarterLayout />
-                              <StatusLayout />
+      <HomeStarterLayout />
+      <StatusLayout />
 
       <HomeBodyLayout />
-                  <Trophy /> 
-                  <HomeExtraLayout />
+      <Trophy />
+      <HomeExtraLayout />
 
-            <HomeLayoutEnding />
-                        <HeroSection /> 
+      <HomeLayoutEnding />
+      <HeroSection />
 
       <Footer />
     </div>
