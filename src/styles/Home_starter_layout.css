@@ -1,0 +1,87 @@
+/* home_starter_layout.css */
+.starter-container {
+  background: #fff;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.starter-subtitle {
+
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 2vw, 1.5rem);
+  font-weight: 800;
+  color: #000000;
+  animation: zoomIn 1.5s ease-out;
+  text-align: center;
+  padding-left: 1rem;
+  margin-top: 20px;
+  margin-bottom: 40px;}
+
+.starter-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 2vw, 1.5rem);
+  font-weight: 400;
+  color: #000000;
+  /* text-shadow: 3px 3px 12px #ffffff; */
+  animation: zoomIn 1.5s ease-out;
+    margin-bottom: 30px;
+  /* Ensure it appears at the start */
+  align-self: flex-start; 
+  text-align: center; /* Ensures left alignment */
+  padding-left: 1rem;
+}
+
+.highlight {
+  color: #78c042; /* Green highlight */
+}
+
+.starter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.starter-card {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 1px #00AC36;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.starter-card:hover {
+  transform: translateY(-5px);
+}
+
+.starter-card.active {
+  background-color: #f9f9f9;
+  color: #000000;
+}
+
+.starter-card .icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+ 
+
+/* Mobile styles */
+  @media (max-width: 600px) {
+    
+.starter-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1rem);
+  font-weight: 800;
+  color: #000000;
+  /* text-shadow: 3px 3px 12px #ffffff; */
+  animation: zoomIn 1.5s ease-out;
+    margin-bottom: 30px;
+  /* Ensure it appears at the start */
+  align-self: flex-start; 
+  text-align: center; /* Ensures left alignment */
+  padding-left: 1rem;
+}
+  }

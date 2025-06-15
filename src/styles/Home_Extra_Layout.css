@@ -1,0 +1,112 @@
+/* HomeExtraLayout.css */
+.extra-layout {
+  padding: 60px 30px;
+  text-align: center;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card-image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.extra-title {
+  
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 2vw, 1.5rem);
+  font-weight: 800;
+  color: #000000;
+  animation: zoomIn 1.5s ease-out;
+  text-align: center;
+  padding-left: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #7ac943;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 5px;
+  width: 160px;
+  border-radius: 12px;
+  box-shadow: 0 4px 1px #00AC36;
+  transition: transform 0.3s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card.active {
+  background-color: white;
+  color: white;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.green-icon {
+  color: #28a745;
+}
+
+.dark-icon {
+  color: #333;
+}
+
+
+
+.footer-note {
+  margin-top: 60px;
+  font-size: 1.2rem;
+}
+
+.note-highlight {
+  color: #888;
+}
+
+.note-main {
+  font-weight: bold;
+  color: #28a745;
+}
+/* Mobile styles */
+  @media (max-width: 600px) {
+    
+.extra-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1rem);
+  font-weight: 800;
+  color: #000000;
+  /* text-shadow: 3px 3px 12px #ffffff; */
+  animation: zoomIn 1.5s ease-out;
+    margin-bottom: 30px;
+  /* Ensure it appears at the start */
+  align-self: flex-start; 
+  text-align: center; /* Ensures left alignment */
+  padding-left: 1rem;
+}
+  }

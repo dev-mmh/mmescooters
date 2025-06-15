@@ -1,0 +1,184 @@
+.company-background {
+  text-align: center;
+  padding: 0px 0;
+}
+
+/* Make About & Logos in One Row */
+.about-container {
+  
+  display: flex;
+  flex: 2;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  padding: 10px;
+  gap: 0px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.css-5c1adp-MuiContainer-root {
+  /* Add your styles here */
+  padding-left: 4px !important; /* Example */
+}
+
+/* Company Description */
+.company-description {
+  flex: 2;
+  font-size: 16px;
+  color: #555555;
+  max-width: 70%;
+  text-align: left;
+}
+
+/* Hexagonal Logo Grid */
+.hex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 300px;
+  position: relative;
+}
+
+/* Individual Hexagon */
+.hex {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #fff;
+  /* border: 0.5px solid #00AC36; */
+}
+
+/* Hexagon Logo */
+.hex-logo {
+  width: 100%;
+  height: auto;
+  animation: fadeInUp 1.5s ease-out;
+
+}
+.stat-item {
+  width: 80px; /* Adjust size as needed */
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #00AC36; /* Outer orange border */
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2), 
+              inset -2px -2px 8px rgba(0, 0, 0, 0.15); /* 3D effect */
+  font-family: 'Merriweather', serif;
+  padding: 10px;
+  gap: 0px;
+  animation: fadeInUp 1.5s ease-out;
+
+}
+
+.stat-value {
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: black !important;
+}
+
+.stat-label {
+  font-size: 12px !important;
+  font-weight: normal !important;
+  color: black !important;
+}
+
+/* Key Stats - In a Row Below */
+.stats-container {
+  display: flex;
+  flex: auto;
+  justify-content: space-around;
+  gap: 2px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  /* margin-left: 40px; */
+  /* background-color: #00AC36; */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align */
+    text-align: center; /* Center text */
+  }
+  .stats-container {
+    display: flex;
+    flex: auto;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* margin-left: 40px; */
+    /* background-color: #00AC36; */
+  }
+  .stat-item {
+    width: 30px; /* Adjust size as needed */
+    height:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #00AC36; /* Outer orange border */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2), 
+                inset -2px -2px 8px rgba(0, 0, 0, 0.15); /* 3D effect */
+    font-family: 'Merriweather', serif;
+    padding: 30px;
+    gap: 0px;
+    animation: fadeInUp 1.5s ease-out;
+
+  }
+  .hex {
+    width: 100px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  
+    background-color: #fff;
+    /* border: 0.5px solid #00AC36; */
+  }
+  .stat-value {
+    font-size: 8px !important;
+    font-weight: bold !important;
+    color: black !important;
+  }
+  
+  .stat-label {
+    font-size: 8px !important;
+    font-weight: normal !important;
+    color: black !important;
+  }
+  .company-description {
+    flex: 2;
+    max-width: 100%; /* Allow full width on small screens */
+    text-align: center; /* Center text for better readability */
+    padding: 0 10px; /* Add some padding for better spacing */
+    animation: fadeInUp 1.5s ease-out;
+
+  }
+
+  .hex-grid {
+    flex: 2;
+    justify-content: center; /* Center logos on small screens */
+  }
+}

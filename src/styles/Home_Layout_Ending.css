@@ -1,0 +1,123 @@
+/* Home_Layout_Ending.css */
+.home-ending-layout {
+  padding: 30px 30px;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.mini-title {
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+}
+
+.main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 2vw, 1.5rem);
+  font-weight: 800;
+  color: #000000;
+  animation: zoomIn 1.5s ease-out;
+  text-align: center;
+  padding-left: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #7ac943;
+}
+
+.view-more {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.articles {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.article-card {
+  background-color: #f8f8f8;
+  /* box-shadow: "0 5px 2px #00AC36"; */
+  width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 2px #00AC36;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-placeholder {
+  background-color: #333;
+  height: 180px;
+  margin-bottom: 15px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.article-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.article-excerpt {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.article-date {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+@media (max-width: 480px) {
+.main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1rem);
+  font-weight: 800;
+  color: #000000;
+  animation: zoomIn 1.5s ease-out;
+  text-align: center;
+  padding-left: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.article-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+  
+}

@@ -1,0 +1,57 @@
+{
+    "header_home": "Home",
+    "header_about": "About Us",
+    "header_contact": "Contact Us",
+    "header_services": "Services",
+    "header_products": "Products",
+    "header_spareparts": "Accessories & Spare Parts",
+    "header_blog&news": "Blogs & News",
+    "header_career": "Career",
+    "header_language": "Language",
+    "header_language_en": "English",
+    "header_language_mm": "Myanmar",
+    "header_language_cn": "Chinese",
+
+    "company_address":"No.B (1-4), 32nd(A) Street, Between 77st*78st, Chanayetharzan Township, Mandalay , Myanmar",
+    "company_address2" :"No.(272), Min Gyi Road, East Ywar Ma Ward, Insein Township, Yangon.",
+    "footer_find_us":"Find Us",
+    "footer_call_us":"Call Us",
+    "footer_mail_us":"Mail Us",
+    "footer_follow_us":"Follow Us",
+    "footer_subscribe_text":"Please, don't miss to subscribe to our new socila media channels for updates",
+    "footer_copy_right":"© 2023 E-Scooter. All rights reserved.",
+    "footer_developer":"Developed by Tio Tech",
+    "title": "Ride Smarter, Save Future",
+
+    "testimonials_caption":"What Our Customers Say!",
+
+    "story_behind_caption":"The story behind MATM E-Scooter",
+    "story_behind":"Founded in 2019 and headquartered in Mandalay, Myanmar.The company specializes in dealership importing, marketing, and distribution of ICE & EV cars and E-scooters. A total of 7 Changan, Bestune, Rhinotek (E-Scooters) 4s Showrooms have been opened in the cities of Yangon and Mandalay. Our owned SKD and BEV factories are also located in Yangon. Over 500 employees are working with Myanmar Arr Thit Man Motor Company Limited.",
+    "company_statement":"Company Statement",
+    "company_statement_text":"Our mission, vision, and values define who we are and guide our journey.",
+    "company_mission_caption":"OUR MISSION",
+    "company_mission_paragraph":"MATM E-Scooter offers advanced and cost-effective E-Scooters and three-wheelers, enabling affordable transportation solutions for business.",
+    "company_vision_caption":"OUR VISION",
+    "company_vision_paragraph":"MATM E-Scooter aims to lead the transporttion industry in Myanmar. It can produce advanced E-Scooters and three-wheelers and aims to become the market leader from 2023 to 2027 .",
+    "company_goal_caption":"OUR GOALS",
+    "company_goal_paragraph":"MATM E-Scooter aims to be the top brand in Myanmar for affordable, high-quality E-Scooters and three-weelers. It strives to success and remain in the transportation market with excellent service and low costs.", 
+    "career_caption":"Looking for a Job? Join Our Team!",
+    "career_title_011":"We are seeking dedicated applicants who:",
+    "career_paragraph_101":"✅ Are committed to long-term employment",
+    "career_paragraph_102":"✅ Are willing to travel",
+    "career_paragraph_103":"✅ Are interested in career growth opportunities",
+    "career_title_021":"If you meet all the above criteria, we encourage you to send us your resume!",
+    "career_title_022":"Please include the following documents along with your application:",
+    "career_paragraph_201":"📌 Three recent passport-sized photos",
+    "career_paragraph_202":"📌 A copy of your NRC (National Registration Card)",
+    "career_paragraph_203":"📌 Family registration document",
+    "career_paragraph_204":"📌 Labor card",
+    "career_paragraph_205":"📌 Education certificates",
+    "career_paragraph_206":"📌 Any other relevant documents",
+
+
+    "description": {
+      "part1": "Um loszulegen, ändere <1>src/App(DE).js</1> speicheren und neuladen.",
+      "part2": "Ändere die Sprachen zwischen deutsch und englisch mit Hilfe der beiden Schalter."
+    }
+  }

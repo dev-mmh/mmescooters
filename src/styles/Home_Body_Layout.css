@@ -1,0 +1,111 @@
+.home-body-layout {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.headline .subtext {
+  color: #888;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.headline .maintext {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 2vw, 1.5rem);
+  font-weight: 800;
+  color: #000000;
+  animation: zoomIn 1.5s ease-out;
+  text-align: center;
+  padding-left: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #7ac943;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ✅ Responsive card sizing */
+@keyframes SlideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform:translateX(0);
+  }
+  
+}   
+.info-card {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  flex: 1 1 calc(25% - 20px); /* Responsive: 4 cards per row with gap */
+  max-width: 250px;
+  border-radius: 10px;
+  
+  box-shadow: 0 2px 1px #00AC36;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: SlideIn 10s ease-out;
+  
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card.active {
+  background-color: white;
+  color: black;
+}
+
+.card-image {
+  width: 50%;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin: auto;
+}
+
+/* ✅ Responsive breakpoints */
+@media (max-width: 1024px) {
+  .info-card {
+    flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .info-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .info-card {
+    flex: 1 1 100%; /* 1 card per row */
+  }
+  .headline .maintext {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1rem);
+  font-weight: 800;
+  color: #000000;
+  animation: zoomIn 1.5s ease-out;
+  text-align: center;
+  padding-left: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+  .card-image {
+    width: 60%;
+    height: 50px;
+  }
+}

@@ -1,0 +1,121 @@
+  /* Logo */
+  .header-logo {
+    width: 100px;
+    height: 50px;
+    /* background-color: #ffffff; */
+    border-radius: 5%;
+  }
+
+  /* Navigation buttons */
+  .header-nav-button {
+    color: #ffffff !important;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .header-nav-button:hover {
+    color: #D37E24 !important;
+  }
+
+  /* Language selector */
+  .header-language-selector {
+    margin-left: 5px;
+    /* background-color: #fff; */
+    border-radius: 5px;
+    border: none;
+  }
+
+  .header-language-option {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-language-flag {
+    width: 24px;
+    height: 16px;
+    margin-right: 10px;
+  }
+
+  /* Mobile menu icon */
+  .header-menu-icon {
+    color: #D37E24;
+    margin-left: auto;
+    /* Position the menu icon at the end */
+  }
+
+  /* Mobile Drawer (Sidebar) */
+  .header-drawer {
+    width: 250px;
+  }
+
+  /* Drawer container */
+  .header-drawer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+
+  }
+
+  /* Drawer logo */
+  .header-drawer-logo img {
+    width: 75px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Active Tab */
+  .active-tab {
+    color: #000000 !important;
+    /* Change text color to green */
+    font-weight: bolder !important;
+    /* Make it bold */
+  }
+
+  /* Mobile Drawer (Sidebar) - List Item Text */
+  .header-drawer .MuiListItemText-primary {
+    color: black; 
+    /* Default text color */
+  }
+
+  /* Change color of text when active (selected link) */
+  .header-drawer .MuiListItemText-primary.active-tab {
+    color: green !important;
+    /* Active text color */
+    font-weight: bold;
+    /* Make it bold */
+  }
+
+  /* Change text color when hovered */
+  .header-drawer .MuiListItemText-primary:hover {
+    color: orange !important;
+    /* Hover text color */
+  }
+
+  .css-h9njcz-MuiToolbar-root{
+    background-color: #00AC36 ;
+    color: white;
+    padding: 0px 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-header-menu-container {
+
+        background-color: #00AC36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    z-index: 99999;
+  }
+
+  .product-header-menu {
+    background-color: rgba(255,255,255,0.9);
+    padding: 30px;
+    width: 100%;
+  }
