@@ -20,9 +20,12 @@ const scooterModels = [
   { brand: "Yadea", model: "M6" },
 ];
 
+const initialState = scooterModels[0]
+
 const SparePartProductList = () => {
-  const [selectedBrand, setSelectedBrand] = useState("");
-  const [selectedModel, setSelectedModel] = useState("");
+  const [selectedBrand, setSelectedBrand] = useState(initialState.brand);
+  const [selectedModel, setSelectedModel] = useState(initialState.model);
+
   const navigate = useNavigate();
 
   const handleBrandChange = (event) => {
@@ -34,15 +37,18 @@ const SparePartProductList = () => {
     setSelectedModel(event.target.value);
   };
 
-  const filteredProducts = SparePartProducts.filter((product) =>
-    product.compatibleModels?.some(
-      (model) => model.brand === selectedBrand && model.model === selectedModel
-    )
-  );
-
   const handleOpen = (product) => {
     navigate(`/product-detail/${product.id}`);
   };
+
+  const brands = [...new Set(scooterModels.map((item) => item.brand))];
+
+  const models = scooterModels
+    .filter((item) => item.brand === selectedBrand)
+    .map((item) => item.model);
+
+  const filteredProducts = SparePartProducts
+    .filter((product) => product.compatibleModels?.some((model) => model.brand === selectedBrand && model.model === selectedModel));
 
   return (
     <Box p={2}>
@@ -57,9 +63,7 @@ const SparePartProductList = () => {
                 onChange={handleBrandChange}
                 label="Brand"
               >
-                {Array.from(
-                  new Set(scooterModels.map((item) => item.brand))
-                ).map((brand) => (
+                {brands.map((brand) => (
                   <MenuItem key={brand} value={brand}>
                     {brand}
                   </MenuItem>
@@ -72,7 +76,6 @@ const SparePartProductList = () => {
               fullWidth
               variant="outlined"
               sx={{ minWidth: 150 }}
-              disabled={!selectedBrand}
             >
               <InputLabel>Model</InputLabel>
               <Select
@@ -80,13 +83,11 @@ const SparePartProductList = () => {
                 onChange={handleModelChange}
                 label="Model"
               >
-                {scooterModels
-                  .filter((item) => item.brand === selectedBrand)
-                  .map((item) => (
-                    <MenuItem key={item.model} value={item.model}>
-                      {item.model}
-                    </MenuItem>
-                  ))}
+                {models.map((item) => (
+                  <MenuItem key={item} value={item}>
+                    {item}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
           </Grid>

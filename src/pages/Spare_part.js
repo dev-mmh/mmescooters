@@ -12,7 +12,7 @@ import AnimatedHeader from "../components/animated_header_text";
 
 // Import custom styles
 import "../styles/product.css"; // Import the CSS file
-import SparePartSection from  "../components/Spare_part_section.js";
+import SparePartSection from "../components/Spare_part_section.js";
 
 const SparePartList = () => {
   const [category, setCategory] = useState("Two Wheel"); // Default category
@@ -38,21 +38,17 @@ const SparePartList = () => {
   return (
     <>
       <Header />
-      
+
       <Box sx={{ textAlign: 'center' }}>
         {/* <Typography variant="h4">Product Categories</Typography> */}
-                  <AnimatedHeader/>
+        <AnimatedHeader />
 
         <HeroText />
 
-                <SparePartSection/>
-                
-
-        
+        <SparePartSection />
 
         {/* Mobile Drawer for Category Selection */}
         <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
-          
           <Drawer
             anchor="bottom"
             open={drawerOpen}
@@ -83,8 +79,8 @@ const SparePartList = () => {
           </Drawer>
         </Box>
       </Box>
-            
-     
+
+
 
       <Footer />
     </>
