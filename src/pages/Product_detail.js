@@ -46,10 +46,14 @@ const ProductDetail = () => {
 
   const onOpenDialog = () => {
     setOpenDialog(true);
+    setProduct1(product);
+    setProduct2(product);
   }
 
   const onCloseDialog = () => {
     setOpenDialog(false);
+    setProduct1(product);
+    setProduct2(product);
   }
 
   return (
