@@ -4,7 +4,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './my_theme'; // Import your custom MUI theme
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
-import Career from './pages/Career';
 import BlogsAndNews from './pages/Blogs_and_News';
 import ContactUs from './pages/ContactUs';
 import Product from './pages/Products';
@@ -19,11 +18,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/career" element={<Career />} />
           <Route path="/blog-and-news" element={<BlogsAndNews />} />
-          <Route path="/contact-us" element ={<ContactUs/>}/>
-          <Route path="/products" element={<Product/>}/>
-          <Route path="/spareparts" element={<SparePart/>}/>
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/products" element={<Product />} />
+          <Route path="/spareparts" element={<SparePart />} />
 
           <Route path="/product-detail/:id" element={<ProductDetail />} /> {/* Route for product detail */}
           <Route path="/blog-and-news/:id" element={<NewsDetail />} />

@@ -52,7 +52,7 @@
 }
 
 .blogs-title {
-  
+
   font-family: 'Poppins', sans-serif;
   font-size: clamp(1.5rem, 2vw, 1.5rem);
   font-weight: 800;
@@ -98,6 +98,7 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .mini-title {
   font-size: 1rem;
   color: #888;
@@ -170,17 +171,18 @@
 @media (max-width: 1024px) {
 
   .blogs-title {
-  
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(1.5rem, 2vw, 1.5rem);
-  font-weight: 600;
-  color: #000000;
-  animation: zoomIn 1.5s ease-out;
-  text-align: center;
-  padding-left: 1rem;
-  /* margin-top: 10px; */
-  margin-bottom: 30px;
-}
+
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1.5rem, 2vw, 1.5rem);
+    font-weight: 600;
+    color: #000000;
+    animation: zoomIn 1.5s ease-out;
+    text-align: center;
+    padding-left: 1rem;
+    /* margin-top: 10px; */
+    margin-bottom: 30px;
+  }
+
   .top-stories {
     flex-direction: column;
   }
@@ -195,12 +197,14 @@
 }
 
 @media (max-width: 768px) {
-  .blogs-title, .text-header {
+
+  .blogs-title,
+  .text-header {
     text-align: center;
     padding-left: 0;
   }
 
-  
+
 
   .news-detail-container {
     width: 95%;
@@ -210,22 +214,23 @@
   .desc-text {
     font-size: 11px;
   }
-  
+
 }
 
 @media (max-width: 480px) {
   .blogs-title {
-  
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(1rem, 1.5vw, 1rem);
-  font-weight: 600;
-  color: #000000;
-  animation: zoomIn 1.5s ease-out;
-  text-align: center;
-  padding-left: 1rem;
-  /* margin-top: 10px; */
-  margin-bottom: 30px;
-}
+
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1rem);
+    font-weight: 600;
+    color: #000000;
+    animation: zoomIn 1.5s ease-out;
+    text-align: center;
+    padding-left: 1rem;
+    /* margin-top: 10px; */
+    margin-bottom: 30px;
+  }
+
   .story-content h2 {
     font-size: 1.2rem;
   }
@@ -233,23 +238,120 @@
   .story-content p {
     font-size: 0.9rem;
   }
+
   .news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .news-card {
+    flex: 1 1 200px;
+    height: 240px;
+    background: #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 2px #00AC36;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+}
+
+.career-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  gap: 40px;
 }
 
-.news-card {
-  flex: 1 1 200px;
-  height: 240px;
-  background: #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 2px #00AC36;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
+/* Image on the Left */
+.career-image {
+  flex: 1;
+  text-align: left;
 }
 
+.career-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
 
-  
+/* Text on the Right */
+.career-text {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.career-text h2 {
+
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 2vw, 1.5rem);
+  font-weight: 600;
+  color: #555555;
+  animation: zoomIn 1.5s ease-out;
+  text-align: center;
+  padding-left: 1rem;
+  /* margin-top: 10px; */
+  margin-bottom: 30px;
+}
+
+.career-text p,
+.career-text h3 {
+  /*  */
+  font-size: clamp(1.2rem, 1.2vw, 1.2rem);
+  font-weight: 150;
+  text-align: match-parent;
+  color: #555555;
+  /* text-shadow: 3px 3px 12px #ffffff; */
+  animation: zoomIn 1.5s ease-out;
+
+  /* Ensure it appears at the start */
+  align-self: flex-start;
+  text-align: left;
+  /* Ensures left alignment */
+  padding-left: 1rem;
+}
+
+.career-text ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.career-text li {
+  /*  */
+  font-size: clamp(1rem, 1vw, 1rem);
+  font-weight: 150;
+  text-align: match-parent;
+  color: #555555;
+  /* text-shadow: 3px 3px 12px #ffffff; */
+  animation: zoomIn 1.5s ease-out;
+
+  /* Ensure it appears at the start */
+  align-self: flex-start;
+  text-align: left;
+  /* Ensures left alignment */
+  padding-left: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .career-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .career-image {
+    text-align: left;
+  }
+
+  .career-text {
+    max-width: 100%;
+    text-align: left;
+  }
 }

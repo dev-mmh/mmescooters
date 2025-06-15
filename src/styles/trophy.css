@@ -1,185 +1,187 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
 body {
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 /* Trophy Section Container */
 .trophy-container {
-    max-width: 60%;
-    margin: 0 auto;
-    padding: 10px 10px;
-  }
-  
-  /* Title & Subtitle */
-  .section-title{
-    font-family: Baskerville, serif;
-    font-size: clamp(2rem, 4vw, 2rem);
-    font-weight: 400;
-    color: #555555;
-    /* text-shadow: 3px 3px 12px #ffffff; */
-    animation: zoomIn 1.5s ease-out;
-  
-   text-align: center;
-  }
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+
+/* Title & Subtitle */
+.section-title {
+  font-family: Baskerville, serif;
+  font-size: clamp(2rem, 4vw, 2rem);
+  font-weight: 400;
+  color: #555555;
+  /* text-shadow: 3px 3px 12px #ffffff; */
+  animation: zoomIn 1.5s ease-out;
+
+  text-align: center;
+}
+
 .section-subtitle {
-  font-family: Merriweather, serif; /* Change to Times New Roman */
+  font-family: Merriweather, serif;
+  /* Change to Times New Roman */
   font-size: clamp(1.5rem, 4vw, 1rem);
   font-weight: 400;
   color: #555555;
   /* text-shadow: 3px 3px 12px #ffffff; */
   animation: zoomIn 1.5s ease-out;
 
- text-align: center;
+  text-align: center;
 }
+
 .trophy-description {
-  font-family: Merriweather, serif; /* Change to Times New Roman */
+  font-family: Merriweather, serif;
+  /* Change to Times New Roman */
   font-size: clamp(1rem, 2vw, 0.5rem);
   font-weight: 400;
   color: #555555;
   /* text-shadow: 3px 3px 12px #ffffff; */
   animation: zoomIn 1.5s ease-out;
 
- text-align: center;
+  text-align: center;
 }
-  
-  /* Two-Column Layout */
-  .trophy-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-  }
-  
-  /* Left Side - Trophy Background */
-  .trophy-left {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .trophy-bg-image {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 12px;
-    box-shadow: 0px 1px 2px #d9d9d9
-    
-    ;
-  }
-  
-  /* Right Side - Swiper */
-  .trophy-right {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Swiper Styles */
-  .swiper {
-    max-width: 835px;
-    margin-top: 20px;
-    /* padding-top: 30px; */
-    padding-bottom: 30px;
-  }
-  
-  .trophy-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 14  0px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 5px 10px 15px #d9d9d9 ;
-    text-align: center;
-    padding: 17px;
-  }
-  
-  /* Full-Height Certificate Image */
+
+/* Two-Column Layout */
+.trophy-content {
+  display: flex;
+  gap: 30px;
+
+  border: 1px solid red;
+}
+
+/* Left Side - Trophy Background */
+.trophy-left {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.trophy-bg-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0px 1px 2px #d9d9d9;
+}
+
+/* Right Side - Swiper */
+.trophy-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Swiper Styles */
+.swiper {
+  width: 100%;
+  max-width: 70%;
+  /* max-width: 835px; */
+  /* margin-top: 20px; */
+  /* padding-top: 30px; */
+  /* padding-bottom: 30px; */
+}
+
+.trophy-card {
+  display: flex;
+  transition-property: box-shadow, transform;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Full-Height Certificate Image */
 .swiper-image {
-    width: 100%;
-    height: auto; /* Maintain full height */
-    max-height: 650px; /* Adjust as needed */
-    object-fit: contain; /* Ensure full visibility */
-  }
-  
-  .swiper-slide-active .swiper-image {
-    transform: scale(1.08); /* Zoom effect on active slide */
-  }
-  
-  .trophy-title {
-    font-size: clamp(1rem, 1vw, 1rem);
+  width: 100%;
+  height: auto;
+  max-height: 650px;
+  object-fit: contain;
+}
+
+.swiper-slide-active .trophy-card {
+  transform: scale(1.08);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* Zoom effect on active slide */
+}
+
+.swiper-slide-active .trophy-title {
+  font-weight: 600;
+  color: #333333;
+}
+
+.trophy-title {
+  font-family: Merriweather, serif;
+  transition-property: color;
+  font-size: 16px;
   color: #555555;
-  /* text-shadow: 3px 3px 12px #ffffff; */
-  animation: zoomIn 1.5s ease-out;
   text-align: center;
   padding-top: 10px;
-  font-weight: 300;
-  }
-
-  .swiper-pagination {
-  position: absolute;
-  bottom: -4px !important; /* Move it below */
+  font-weight: 400;
 }
 
-  /* Change pagination bullet color */
+.swiper-pagination {
+  position: absolute;
+  bottom: -4px !important;
+  /* Move it below */
+}
+
+/* Change pagination bullet color */
 .swiper-pagination-bullet {
-  
-  background: green !important; /* Changes all bullets to green */
-  opacity: 0.6; /* Slight transparency for inactive bullets */
+
+  background: green !important;
+  /* Changes all bullets to green */
+  opacity: 0.6;
+  /* Slight transparency for inactive bullets */
 }
 
 /* Change active pagination bullet color */
 .swiper-pagination-bullet-active {
-  background: #F57921 !important; /* Changes the active bullet to dark green */
+  background: #F57921 !important;
+  /* Changes the active bullet to dark green */
   opacity: 1;
 }
 
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .trophy-content {
-      flex-direction: column;
-      align-items: center;
-      width: 80%;
-    }
-    .trophy-card {
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .trophy-content {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+
+  .trophy-card {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     justify-content: center;
     width: 200px;
-    height: 14  0px;
+    height: 14 0px;
     background: white;
     border-radius: 5px;
-    box-shadow: 5px 10px 15px #d9d9d9 ;
+    box-shadow: 5px 10px 15px #d9d9d9;
     text-align: center;
     padding: 4px;
     padding-right: 20px;
   }
-    .trophy-bg-image {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 12px;
-      box-shadow: 0px 1px 2px #8b8b8b;
-    }
-    .trophy-title {
-      font-family: Merriweather, serif; /* Change to Times New Roman */
-    font-size: clamp(0.5rem, 1vw, 0.5rem);
-    color: #555555;
-    /* text-shadow: 3px 3px 12px #ffffff; */
-    animation: zoomIn 1.5s ease-out;
-  
-   text-align: center;
-      padding-top: 2px;
-      font-weight: bold;
-  
-    }
-  
-    .swiper {
-      max-width: 300px;
-    }
+
+  .trophy-bg-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0px 1px 2px #8b8b8b;
   }
-  
+
+  .swiper {
+    max-width: 300px;
+  }
+}
