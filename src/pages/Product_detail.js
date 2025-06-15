@@ -47,13 +47,13 @@ const ProductDetail = () => {
   const onOpenDialog = () => {
     setOpenDialog(true);
     setProduct1(product);
-    setProduct2(product);
+    setProduct2(undefined);
   }
 
   const onCloseDialog = () => {
     setOpenDialog(false);
     setProduct1(product);
-    setProduct2(product);
+    setProduct2(undefined);
   }
 
   return (
@@ -105,11 +105,12 @@ const ProductDetail = () => {
               >
                 <DialogTitle sx={{ display: "flex", justifyContent: "center" }}>Compare Products</DialogTitle>
                 <DialogContent>
-                  <Grid2 container spacing={2}>
+                  <Grid2 container spacing={2} padding={2}>
                     <Grid2 size={{ xs: 12, md: 6 }} sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
                       <ProductSelect
                         product={product1}
                         onSelect={setProduct1}
+                        exclueIds={[product2?.id]}
                       />
                       <motion.img
                         ref={imageRef}
@@ -125,15 +126,20 @@ const ProductDetail = () => {
                       <ProductSelect
                         product={product2}
                         onSelect={setProduct2}
+                        exclueIds={[product1?.id]}
                       />
-                      <motion.img
-                        ref={imageRef}
-                        src={product2.imageUrl}
-                        alt={product2.name}
-                        className="main-image"
-                        style={{ height: "200px", objectFit: "contain" }}
-                      />
-                      <ProductInfo product={product2} />
+                      {
+                        product2 && <>
+                          <motion.img
+                            ref={imageRef}
+                            src={product2.imageUrl}
+                            alt={product2.name}
+                            className="main-image"
+                            style={{ height: "200px", objectFit: "contain" }}
+                          />
+                          <ProductInfo product={product2} />
+                        </>
+                      }
                     </Grid2>
                   </Grid2>
                 </DialogContent>
@@ -186,26 +192,27 @@ const ProductInfo = ({ product }) => {
   )
 }
 
-const ProductSelect = ({ product, onSelect }) => {
+const ProductSelect = ({ product, onSelect, exclueIds = [] }) => {
   return (
     <DropdownButton
-      key={product.id}
       variant={"outline-dark"}
       title={"Change Product"}
       size="sm"
       style={{ display: "flex", justifyContent: "center" }}
     >
       {
-        products.map((p) => (
-          <Dropdown.Item
-            key={p.id}
-            eventKey={p.id}
-            onClick={() => onSelect(p)}
-            active={product.id === p.id}
-          >
-            {p.name}
-          </Dropdown.Item>
-        ))
+        products
+          .filter(p => !exclueIds.includes(p.id))
+          .map((p) => (
+            <Dropdown.Item
+              key={p.id}
+              eventKey={p.id}
+              onClick={() => onSelect(p)}
+              active={p.id === product?.id}
+            >
+              {p.name}
+            </Dropdown.Item>
+          ))
       }
     </DropdownButton>
   )
