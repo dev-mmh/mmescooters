@@ -18,7 +18,6 @@ const certificates = [
   { id: 3, img: Yadea_certi_1, award_name: "AIMA", award_description: "Total Sales Volume of Electric Two-wheel Vehincle Exceeded 100 Million Units" },
   { id: 4, img: Yadea_certi_2, award_name: "YADEA", award_description: "Global No.1 in sales volume for 5 consecutive years" },
   // { id: 5, img: Certificate2, award_name: "YADEA" },
-
 ];
 
 const Trophy = () => {
@@ -29,18 +28,23 @@ const Trophy = () => {
       <Swiper
         effect="coverflow"
         grabCursor={true}
+        spaceBetween={30}
         centeredSlides={true}
         slidesPerView={3}
         loop={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         coverflowEffect={{
           rotate: 0,
-          stretch: 400,
           // depth: 120,
-          modifier: 1.5,
+          // modifier: 1.5,
           slideShadows: false,
         }}
         modules={[EffectCoverflow, Autoplay, Pagination]}
+        style={{
+          width: "100%",
+          height: "100%",
+          border: "1px solid white"
+        }}
       >
         {certificates.map((cert) => (
           <SwiperSlide key={cert.id} style={{ display: "flex", justifyContent: "center", padding: "10px 0" }}>
