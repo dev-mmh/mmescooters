@@ -60,7 +60,6 @@ const Header = () => {
     { text: t("header_about"), link: "/about" },
     { text: t("header_products"), link: "/products" },
     { text: t("header_spareparts"), link: "/spareparts" },
-    { text: t("header_career"), link: "/career" },
     { text: t("header_blog&news"), link: "/blog-and-news" },
     { text: t("header_contact"), link: "/contact-us" },
   ];
