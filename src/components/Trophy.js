@@ -28,17 +28,12 @@ const Trophy = () => {
       <Swiper
         effect="coverflow"
         grabCursor={true}
-        spaceBetween={30}
+        // spaceBetween={30}
         centeredSlides={true}
         slidesPerView={3}
         loop={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
-        coverflowEffect={{
-          rotate: 0,
-          // depth: 120,
-          // modifier: 1.5,
-          slideShadows: false,
-        }}
+        coverflowEffect={{ slideShadows: false }}
         modules={[EffectCoverflow, Autoplay, Pagination]}
         style={{
           width: "100%",
