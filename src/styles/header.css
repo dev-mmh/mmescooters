@@ -1,15 +1,16 @@
   /* Logo */
   .header-logo {
-    width: 100px;
-    height: 50px;
-    /* background-color: #ffffff; */
-    border-radius: 8px;
-    object-fit: cover;
+    width: 75px;
+    height: auto;
+    border-radius: 4px;
+    padding: 4px;
+    object-fit: contain;
+    background-color: #ffffff;
   }
 
   /* Navigation buttons */
   .header-nav-button {
-    color: #ffffff !important;
+    color: black !important;
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -24,6 +25,8 @@
     /* background-color: #fff; */
     border-radius: 5px;
     border: none;
+    outline-color: red;
+    box-shadow: none;
   }
 
   .header-language-option {
@@ -70,7 +73,7 @@
 
   /* Active Tab */
   .active-tab {
-    color: #000000 !important;
+    color: orange !important;
     /* Change text color to green */
     font-weight: bolder !important;
     /* Make it bold */
@@ -78,13 +81,13 @@
 
   /* Mobile Drawer (Sidebar) - List Item Text */
   .header-drawer .MuiListItemText-primary {
-    color: black;
+    color: black !important;
     /* Default text color */
   }
 
   /* Change color of text when active (selected link) */
   .header-drawer .MuiListItemText-primary.active-tab {
-    color: green !important;
+    /* color: green !important; */
     /* Active text color */
     font-weight: bold;
     /* Make it bold */
@@ -97,8 +100,8 @@
   }
 
   .css-h9njcz-MuiToolbar-root {
-    background-color: #00AC36;
-    color: white;
+    /* background-color: #00AC36; */
+    /* color: white; */
     padding: 0px 10px;
     height: 60px;
     display: flex;
@@ -108,7 +111,7 @@
 
   .product-header-menu-container {
 
-    background-color: #00AC36;
+    /* background-color: #00AC36; */
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,14 +1,14 @@
 // Home_Body_Layout.js
 import React from "react";
 import "../styles/Home_Body_Layout.css";
-import MATM_Logo from "../assets/images/logo_png.png";
+// import MATM_Logo from "../assets/images/logo_png.png";
 import Yadea_Logo from "../assets/images/yadea.png";
 import Aima_Logo from "../assets/images/aima.jpg";
 import Rehinotek_Logo from "../assets/images/phinotek.jpg";
 
 const HomeBodyLayout = () => {
   const cards = [
-    { image: MATM_Logo },
+    // { image: MATM_Logo },
     { image: Yadea_Logo },
     { image: Aima_Logo },
     { image: Rehinotek_Logo }

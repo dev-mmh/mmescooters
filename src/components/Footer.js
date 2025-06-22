@@ -2,17 +2,22 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Box, Typography, Grid, Link, TextField, Button } from '@mui/material';
 import { Email, Phone, LocationOn, Send } from '@mui/icons-material';
-import Facebook from '../assets/social_media_image/facebook.png';
-import Instagram from '../assets/social_media_image/instagram.png';
-import WhatsApp from '../assets/social_media_image/whats_up.png';
-import TikTok from '../assets/social_media_image/tik_tok.png';
+import { LuFacebook, } from "react-icons/lu"
+// import Facebook from '../assets/social_media_image/facebook.png';
+// import Instagram from '../assets/social_media_image/instagram.png';
+// import WhatsApp from '../assets/social_media_image/whats_up.png';
+// import TikTok from '../assets/social_media_image/tik_tok.png';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { FacebookRounded } from '@mui/icons-material';
+import { Instagram } from '@mui/icons-material';
+import { MusicNote } from '@mui/icons-material';
 
 const Footer = () => {
   const { t } = useTranslation();
 
   return (
     <Box sx={{
-      color: '#fff', padding: 4, fontSize: '14px', background: "#eeeeee", position: 'relative',
+      color: '#fff', padding: 4, fontSize: '14px', fontWeight: 600, background: "#eeeeee", position: 'relative',
       zIndex: -1, borderRadius: "32px 32px 0 0"
     }}>
       {/* Top Section - Contact Info */}
@@ -79,18 +84,22 @@ const Footer = () => {
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
             <Box sx={{ mt: 2, ml: "auto", display: 'flex', flexDirection: 'column' }}>
               <Typography className='hero-text footer_title' sx={{ mb: 2 }}>{t("footer_follow_us")}</Typography>
-              <Box sx={{ display: 'flex', ml: 2, }}>
+              <Box sx={{ display: 'flex', gap: 2 }}>
                 <Link href="#" sx={{ textDecoration: 'none' }}>
-                  <img className='hero-image-footer' src={Facebook} alt="Facebook" />
+                  {/* <img className='hero-image-footer' src={Facebook} alt="Facebook" /> */}
+                  <FacebookRounded sx={{ fill: "black" }} />
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none' }}>
-                  <img className='hero-image-footer' src={WhatsApp} alt="Twitter" width="24" height="24" />
+                  <WhatsAppIcon sx={{ fill: "black" }} />
+                  {/* <img className='hero-image-footer' src={WhatsApp} alt="Twitter" width="24" height="24" /> */}
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none' }}>
-                  <img className='hero-image-footer' src={TikTok} alt="Instagram" width="24" height="24" />
+                  <MusicNote sx={{ fill: "black" }} />
+                  {/* <img className='hero-image-footer' src={TikTok} alt="Instagram" width="24" height="24" /> */}
                 </Link>
                 <Link href="#" sx={{ textDecoration: 'none' }}>
-                  <img className='hero-image-footer' src={Instagram} alt="Instagram" width="24" height="24" />
+                  <Instagram sx={{ fill: "black" }} />
+                  {/* <img className='hero-image-footer' src={Instagram} alt="Instagram" width="24" height="24" /> */}
                 </Link>
               </Box>
             </Box>

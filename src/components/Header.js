@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom"; // Import useLocation
 import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Logo from "../assets/images/logo.jpeg";
+import Logo from "../assets/images/logo_png.png";
 import "../styles/header.css"; // Import separate CSS
 import HeaderMenu from "./HeaderMenu";
 import { useTranslation } from 'react-i18next';
@@ -57,8 +57,8 @@ const Header = () => {
 
   const menuItems = [
     { text: t("header_home"), link: "/" },
-    { text: t("header_about"), link: "/about" },
     { text: t("header_products"), link: "/products" },
+    { text: t("header_about"), link: "/about" },
     { text: t("header_spareparts"), link: "/spareparts" },
     { text: t("header_blog&news"), link: "/blog-and-news" },
     { text: t("header_contact"), link: "/contact-us" },
@@ -77,7 +77,7 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position="sticky" className="header-appbar" sx={{ background: "#00AC36", color: "#FFFFFF" }}>
+      <AppBar position="sticky" sx={{ background: "#ffffff", boxShadow: "0px 2px 0px #eee" }} className="header-appbar">
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           {/* Logo */}
           <IconButton edge="start" component={Link} to="/">
@@ -101,7 +101,7 @@ const Header = () => {
               ))}
 
               {/* Language Selector */}
-              <Select value={language} onChange={handleLanguageChange} className="header-language-selector">
+              <Select out value={language} onChange={handleLanguageChange} variant="standard" className="header-language-selector">
                 {languages.map((lang) => (
                   <MenuItem key={lang.code} value={lang.code} className="header-language-option">
                     <img src={lang.flag} alt={lang.label} className="header-language-flag" />

@@ -69,7 +69,7 @@ const ContactUs = () => {
 
         <div className="contact-content">
           <div className="contact-info">
-            <h3 className='statement-title'>Our Showroom</h3>
+            <h3 className='statement-title' style={{ fontSize: "1.25rem" }}>Our Showroom</h3>
             <p><strong>Address:</strong> {t("company_address")}</p>
             <p><strong>Phone:</strong> +959 796265591</p>
             <p><strong>Email:</strong> arrthitmanescooter@gmail.com</p>
