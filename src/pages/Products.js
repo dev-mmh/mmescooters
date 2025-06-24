@@ -43,7 +43,7 @@ const ProductList = () => {
       <Header />
 
       <Box sx={{ textAlign: 'center' }}>
-        <AnimatedHeader />
+        {/* <AnimatedHeader /> */}
 
         {/* <Typography variant="h4">Product Categories</Typography> */}
         <HeroText />

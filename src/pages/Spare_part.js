@@ -41,7 +41,7 @@ const SparePartList = () => {
 
       <Box sx={{ textAlign: 'center' }}>
         {/* <Typography variant="h4">Product Categories</Typography> */}
-        <AnimatedHeader />
+        {/* <AnimatedHeader /> */}
 
         <HeroText />
 

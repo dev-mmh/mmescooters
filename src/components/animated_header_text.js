@@ -17,7 +17,7 @@ const AnimatedHeader = () => {
         {/* {t("title")} */}
       </Typography>
     </motion.div>
-    
+
   );
 };
 

@@ -10,7 +10,7 @@ const backgroundImages = [
   // require("../assets/images/wp5.jpg"),
   require("../assets/images/wallHome4.jpg"),
   require("../assets/images/wallHome5.jpg"),
-    require("../assets/images/wallHome1.jpg"),
+  require("../assets/images/wallHome1.jpg"),
 
 ];
 
@@ -34,10 +34,10 @@ const HeroText = () => {
           key={bgIndex}
           className="hero-background"
           style={{ backgroundImage: `url(${backgroundImages[bgIndex]})` }}
-          initial={{ opacity: 0.8, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 1, scale: 1.1 }}
-          transition={{ duration: 1.5, ease: "linear" }}
+          initial={{ opacity: 0.7, }}
+          animate={{ opacity: 1, }}
+          exit={{ opacity: 0.5, }}
+          transition={{ duration: 4, ease: "linear" }}
         />
       </AnimatePresence>
 

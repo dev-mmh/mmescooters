@@ -13,22 +13,22 @@ import ImageSlider from '../components/Image_Slider_Home';
 const AboutUs = () => {
   return (
     <div>
-                    <Header />
-                                        <AnimatedHeader></AnimatedHeader>
+      <Header />
+      {/* <AnimatedHeader></AnimatedHeader> */}
 
-                    <ImageSlider />
+      <ImageSlider />
 
-    <Container maxWidth="lg" className="about-container">
-      {/* Section 1: Company Background */}
+      <Container maxWidth="lg" className="about-container">
+        {/* Section 1: Company Background */}
         <CompanyBackground />
-       
-      {/* Section 2: Mission & Vision */}
-      <CompanyStatement />
 
-      
+        {/* Section 2: Mission & Vision */}
+        <CompanyStatement />
 
-      {/* Section 4: Investor & Partnership */}
-      {/* <Box sx={{ mb: 6 }}>
+
+
+        {/* Section 4: Investor & Partnership */}
+        {/* <Box sx={{ mb: 6 }}>
         <Typography variant="h4" className="about-title">
           Investor & Partnership
         </Typography>
@@ -40,11 +40,11 @@ const AboutUs = () => {
           </CardContent>
         </Card>
       </Box> */}
-    </Container>
-    <Footer />
+      </Container>
+      <Footer />
 
     </div>
-    
+
   );
 };
 

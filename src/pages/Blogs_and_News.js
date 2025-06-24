@@ -25,7 +25,7 @@ const Blogs_and_News = () => {
     return (
         <div>
             <Header />
-            <AnimatedHeader />
+            {/* <AnimatedHeader /> */}
             {/* <div className="hero-section"> */}
             <HeroText />
             {/* </div> */}

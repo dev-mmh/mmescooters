@@ -75,9 +75,27 @@ const Header = () => {
     text === t("header_products") && setIsShowMenu(!isShowProductMenu)
   }
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <AppBar position="sticky" sx={{ background: "#ffffff", boxShadow: "0px 2px 0px #eee" }} className="header-appbar">
+      <AppBar
+        position="fixed"
+        sx={{
+          background: scrolled ? "#ffffff" : "transparent",
+          boxShadow: scrolled ? "0px 2px 0px #eee" : "none",
+          transition: "background 0.3s, box-shadow 0.3s"
+        }}
+        className="header-appbar"
+      >
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           {/* Logo */}
           <IconButton edge="start" component={Link} to="/">
@@ -101,7 +119,7 @@ const Header = () => {
               ))}
 
               {/* Language Selector */}
-              <Select out value={language} onChange={handleLanguageChange} variant="standard" className="header-language-selector">
+              <Select value={language} onChange={handleLanguageChange} variant="standard" className="header-language-selector">
                 {languages.map((lang) => (
                   <MenuItem key={lang.code} value={lang.code} className="header-language-option">
                     <img src={lang.flag} alt={lang.label} className="header-language-flag" />
@@ -148,9 +166,9 @@ const Header = () => {
             </List>
           </Box>
         </Drawer>
-      </AppBar >
-      {isShowProductMenu && <HeaderMenu onClose={() => setIsShowMenu(false)} />}</>
-
+      </AppBar>
+      {isShowProductMenu && <HeaderMenu onClose={() => setIsShowMenu(false)} />}
+    </>
   );
 };
 

@@ -57,7 +57,7 @@ const ContactUs = () => {
   return (
     <div>
       <Header />
-      <AnimatedHeader />
+      {/* <AnimatedHeader /> */}
 
       <HeroText />
 
